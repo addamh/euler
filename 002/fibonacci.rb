@@ -1,7 +1,6 @@
 #!/usr/bin/env ruby
 valOne = sum = result = 0
 valTwo = 1
-
 until sum > 4000000
    sum = valOne + valTwo
    valOne = valTwo
@@ -10,5 +9,5 @@ until sum > 4000000
       result = sum + result
    end
 end
-
 puts result
+
