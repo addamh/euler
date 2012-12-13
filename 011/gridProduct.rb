@@ -26,7 +26,7 @@ GRID
 processed_grid = []
 # Split heredoc string into a multidimensional array (20x20 grid)
 string.each_line do |line|
-	processed_grid.push line.split.map! {|k| k.to_i }
+  processed_grid.push line.split.map! {|k| k.to_i }
 end
 
 directions = [ # Movement coordinates on an [x,y] plane on the grid
@@ -43,19 +43,19 @@ directions = [ # Movement coordinates on an [x,y] plane on the grid
 max = 0
 
 processed_grid.each_with_index do |row, y|
-	row.each_with_index	do |cell, x|
-		directions.each do |x_movement, y_movement|
-			product = 1
-			4.times do |i|
-				x_pos = x + i * x_movement
-				y_pos = y + i * y_movement
-				unless (x_pos < 0 || x_pos >= row.length) || (y_pos < 0 || y_pos >= processed_grid.length)
-					product *= processed_grid[y_pos][x_pos]
-				end
-			end
-			max = product unless product < max
-		end
-	end
+  row.each_with_index  do |cell, x|
+    directions.each do |x_movement, y_movement|
+      product = 1
+      4.times do |i|
+        x_pos = x + i * x_movement
+        y_pos = y + i * y_movement
+        unless (x_pos < 0 || x_pos >= row.length) || (y_pos < 0 || y_pos >= processed_grid.length)
+          product *= processed_grid[y_pos][x_pos]
+        end
+      end
+      max = product unless product < max
+    end
+  end
 end
 
 p max
