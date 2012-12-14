@@ -103,4 +103,4 @@ input = <<INPUT
 53503534226472524250874054075591789781264330331690
 INPUT
 
-p input.split("\n").map! {|k| k.to_i}.reduce(:+).to_s[0..9]
+p input.split("\n").map! {|k| k.to_i}.reduce(:+).to_s[0..9].to_i
