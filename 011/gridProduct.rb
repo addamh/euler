@@ -36,7 +36,7 @@ directions = [ # Movement coordinates on an [x,y] plane on the grid
               [0,-1],   # Down
               [0,1],    # Up
               [1,-1],   # Right-Down
-              [1,0],    # Up
+              [1,0],    # Right
               [1,1]     # Right-Up
             ]
 
