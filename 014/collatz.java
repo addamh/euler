@@ -25,6 +25,8 @@ public class collatz {
         b=i;
       }
     }
-    System.out.println(a+" -> "+b);
+    // Debug output
+    // System.out.println(a+" -> "+b);
+    System.out.println(b);
   }
 }
