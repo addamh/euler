@@ -19,7 +19,7 @@ task :new, :number do |t, args|
   end
   touch answer_file
   
-  question_file = "#{padded_id}/question.markdown"
+  question_file = "#{padded_id}/question.html"
   if File.exist?(question_file)
     abort("rake aborted!") if ask("#{file} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
   end
