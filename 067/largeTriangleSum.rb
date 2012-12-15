@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-file = File.open("triangle.txt", "r")
+file = File.open("/Users/addam/dev/euler/067/triangle.txt", "r")
 contents = file.read
 rows = contents.each_line.map { |line| line.split.map(&:to_i) }
 
